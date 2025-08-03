@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  joke-api:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - .:/app
+    restart: unless-stopped
+
